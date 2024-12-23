@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container1" id="app">
+<div class="container">
+    <h2>Fill in Your Resume Information</h2>
+    <form id="resumeForm">
+        <div class="form-group">
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required v-model="profession">
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required v-model="city">
+        </div>
+        <div class="form-group">
+            <label for="photoUrl">Photo URL:</label>
+            <input type="url" id="photoUrl" name="photoUrl" required v-model="photo_url">
+        </div>
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required v-model="full_name" >
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required v-model="phone">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required v-model="email">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required v-model="date_of_birth">
+        </div>
+        <div class="form-group">
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" required v-model="education">
+        </div>
+        <div class="form-group">
+            <label for="desiredSalary">Desired Salary:</label>
+            <input type="text" id="desiredSalary" name="desiredSalary" required v-model="desired_salary">
+        </div>
+        <div class="form-group">
+            <label for="skills">Key Skills:</label>
+            <textarea id="skills" name="skills" rows="4" required v-model="skills"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="aboutMe">About Me:</label>
+            <textarea id="aboutMe" name="aboutMe" rows="6" required v-model="about_me"></textarea>
+        </div>
+
+    </form>
+
+</div>
+    <div class="container">
+        <h2>Fill in Your Resume Information</h2>
+        <form id="resumeForm">
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <label for="profession">{{ profession }}</label>
+
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <label for="profession">{{ city }}</label>
+            </div>
+            <div class="form-group">
+                <label for="photoUrl">Photo URL:</label>
+
+                <img :src="photo_url" width="400" height="200" alt="Фото" />
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <label for="profession">{{ full_name }}</label>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <label for="profession">{{ phone }}</label>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <label for="profession">{{ email }}</label>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <label for="profession">{{ date_of_birth }}</label>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <label for="profession">{{ education }}</label>
+            </div>
+            <div class="form-group">
+                <label for="desiredSalary">Desired Salary:</label>
+                <label for="profession">{{ desired_salary }}</label>
+            </div>
+            <div class="form-group">
+                <label for="skills">Key Skills:</label>
+                <div >{{ key_skills }}</div>
+            </div>
+            <div class="form-group">
+                <label for="aboutMe">About Me:</label>
+                <label for="profession">{{ about_me }}</label>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
